@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetNova - Book Appointment</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href=".css/VETNOVA.CSS">
+    <link rel="stylesheet" href=".css/HOME.CSS">
+    <link rel="stylesheet" href=".css/FEATURE.css">
+    <link rel="stylesheet" href=".css/Appointment booking.css"> 
+</head>
+<body>
+
+    <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content Area -->
+    <main class="appointment-main-wrapper">
+        <section class="appointment-section">
+            <div class="appointment-container">
+                
+                <!-- Section Header -->
+                <div class="appointment-header-area">
+                    <h2><i class="fa-regular fa-calendar-check"></i> Book an Appointment</h2>
+                    <p>Secure a premium slot with our verified veterinary specialists for your beloved pet.</p>
+                </div>
+
+                <div class="appointment-grid-layout">
+                    
+                    <!-- Left Side: Interactive Booking Form -->
+                    <div class="booking-form-card">
+                        <form id="pet-appointment-form" onsubmit="handleBookingSubmit(event)">
+                            
+                            <!-- Step 1: Pet Owner Information -->
+                            <div class="form-section-title">
+                                <span class="step-number">1</span>
+                                <h3>Owner & Pet Details</h3>
+                            </div>
+                            
+                            <div class="form-row-two-col">
+                                <div class="form-group-field">
+                                    <label for="owner-name"><i class="fas fa-user"></i> Your Name</label>
+                                    <input type="text" id="owner-name" placeholder="e.g., Sanjida Munia" required>
+                                </div>
+                                <div class="form-group-field">
+                                    <label for="owner-phone"><i class="fas fa-phone-alt"></i> Phone Number</label>
+                                    <input type="tel" id="owner-phone" placeholder="e.g., 017XXXXXXXX" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-two-col">
+                                <div class="form-group-field">
+                                    <label for="pet-name"><i class="fas fa-paw"></i> Pet's Name</label>
+                                    <input type="text" id="pet-name" placeholder="e.g., Tom / Lucy" required>
+                                </div>
+                                <div class="form-group-field">
+                                    <label for="pet-type"><i class="fas fa-dog"></i> Pet Type</label>
+                                    <select id="pet-type" required>
+                                        <option value="" disabled selected>Select Pet Type</option>
+                                        <option value="Cat">Cat / Feline</option>
+                                        <option value="Dog">Dog / Canine</option>
+                                        <option value="Bird">Bird / Avian</option>
+                                        <option value="Rabbit">Rabbit / Lagomorph</option>
+                                        <option value="Fish">Fish / Aquatic Pet</option>
+                                        <option value="Turtle">Turtle / Tortoise</option>
+                                        <option value="Hamster">Hamster / Guinea Pig</option>
+                                        <option value="Exotic">Exotic Pet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Select Doctor & Schedule -->
+                            <div class="form-section-title">
+                                <span class="step-number">2</span>
+                                <h3>Select Doctor & Schedule</h3>
+                            </div>
+
+                            <div class="form-group-field">
+                                <label for="doctor-select"><i class="fas fa-user-md"></i> Veterinary Specialist</label>
+                                <input type="text" id="doctor-select" required placeholder="Enter vet's name or specialization">
+                                    
+                            </input>
+                            </div>
+
+                            <div class="form-row-two-col">
+                                <div class="form-group-field">
+                                    <label for="appointment-date"><i class="far fa-calendar-alt"></i> Preferred Date</label>
+                                    <input type="date" id="appointment-date" required>
+                                </div>
+                                <div class="form-group-field">
+                                    <label for="appointment-time"><i class="far fa-clock"></i> Preferred Time Slot</label>
+                                    <select id="appointment-time" required>
+                                        <option value="" disabled selected>Select Time Slot</option>
+                                        <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM (Morning)</option>
+                                        <option value="02:00 PM - 04:00 PM">02:00 PM - 04:00 PM (Afternoon)</option>
+                                        <option value="06:00 PM - 08:00 PM">06:00 PM - 08:00 PM (Evening)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-submit-appointment">
+                                <i class="far fa-check-circle"></i> Confirm Booking Now
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <!-- Right Side: Informative Live Sidebar -->
+                    <div class="booking-info-sidebar">
+                        <div class="info-notice-box">
+                            <h4><i class="fas fa-shield-alt"></i> VetNova Guarantee</h4>
+                            <p>All doctors registered under our platform are verified with BMVC accreditation and undergo rigorous background quality checks.</p>
+                        </div>
+                        
+                        <div class="steps-guide-box">
+                            <h4>How it works?</h4>
+                            <ul class="guide-steps-list">
+                                <li>
+                                    <div class="guide-icon"><i class="fas fa-file-alt"></i></div>
+                                    <div class="guide-text">
+                                        <h5>Fill Up Details</h5>
+                                        <p>Provide accurate information about your pet and choose your doctor.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="guide-icon"><i class="fas fa-bell"></i></div>
+                                    <div class="guide-text">
+                                        <h5>Instant SMS Alert</h5>
+                                        <p>Receive a digital token and confirmation code on your phone number.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="guide-icon"><i class="fas fa-clinic-medical"></i></div>
+                                    <div class="guide-text">
+                                        <h5>Visit Clinic Comfortably</h5>
+                                        <p>Show your digital token at the reception and skip long, messy queues.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Emergency Contacts Inside Sidebar -->
+                        <div class="sidebar-emergency-card">
+                            <h5>Need Urgent Care?</h5>
+                            <p>If your pet is in critical condition, call our 24/7 hotline directly.</p>
+                            <a href="tel:+8801700000000" class="sidebar-hotline-btn"><i class="fas fa-phone-alt"></i> Call +880 1700-000000</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript Base Controllers -->
+    <script src=".js/VETS_DATA.js"></script>
+    <script src=".js/VETNOVA.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+
+    const loggedIn = localStorage.getItem("isLoggedIn");
+
+    if (loggedIn !== "true") {
+
+        localStorage.setItem(
+            "redirectAfterLogin",
+            window.location.href
+        );
+
+       
+
+        window.location.href = "login.html";
+
+        return;
+    }
+
+});
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const doctorName = urlParams.get('doctor'); 
+            
+            if (doctorName) {
+                const doctorSelect = document.getElementById('doctor-select');
+                
+               
+                for (let option of doctorSelect.options) {
+                    if (option.value === doctorName) {
+                        option.selected = true; 
+                        break;
+                    }
+                }
+            }
+        });
+
+       function handleBookingSubmit(event) {
+
+    event.preventDefault();
+
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+
+        localStorage.setItem(
+            "redirectAfterLogin",
+            window.location.href
+        );
+
+        window.location.href = "login.html";
+
+        return;
+    }
+
+    alert("🎉 Appointment Booked Successfully!");
+
+    document.getElementById("pet-appointment-form").reset();
+
+}
+    </script>
+
+<script
+window.addEventListener("DOMContentLoaded", () => {
+    const doctorName = new URLSearchParams(window.location.search).get("doctor");
+
+    if (doctorName) {
+        const doctorInput = document.getElementById("doctor-select");
+
+        doctorInput.value = doctorName;
+        doctorInput.readOnly = true; // চাইলে edit বন্ধ
+    }
+}
+    </script>           
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VetNova Digital Health Record</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- CSS Links -->
+    <link rel="stylesheet" href=".css/VETNOVA.CSS">
+    <link rel="stylesheet" href=".css/HOME.CSS">
+    <link rel="stylesheet" href=".css/FEATURE.css">
+    <link rel="stylesheet" href=".css/Appointment booking.css"> 
+     <link rel="stylesheet" href=".css/Vaccine.css">
+     <link rel="stylesheet" href=".css/digital-card.css">
+
+</head>
+<body>
+<!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+<div class="dashboard">
+
+    <div class="topbar">
+        <div class="logo">🐾 VetNova Digital Health Record</div>
+
+        <div class="status">
+            <div class="badge blue">Healthy</div>
+            <div class="badge green">Vaccination Completed</div>
+            <div class="badge yellow">Bordetella Pending</div>
+        </div>
+    </div>
+
+    <div class="profile-card">
+    <div class="pet-info-container">
+        <div class="avatar-wrapper">
+            <div class="avatar">
+                <img id="petImage" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500" alt="Bruno">
+            </div>
+            <label for="imageUpload" class="edit-photo">
+                <i class="fa-solid fa-camera"></i>
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" hidden>
+        </div>
+
+        <div class="pet-details">
+            <h2>Bruno</h2>
+            <p><b>Species:</b> Dog</p>
+            <p><b>Breed:</b> Golden Retriever</p>
+            <p><b>Age:</b> 3 Years</p>
+            <p><b>Gender:</b> Male</p>
+            <p><b>Pet ID:</b> VN-001</p>
+        </div>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-box"><h4>Owner</h4><p>John Smith</p></div>
+        <div class="info-box"><h4>Weight</h4><p>28 KG</p></div>
+        <div class="info-box"><h4>Microchip ID</h4><p>VS300006936</p></div>
+        <div class="info-box"><h4>Last Checkup</h4><p>12 June 2026</p></div>
+        <div class="info-box"><h4>Next Visit</h4><p>20 July 2026</p></div>
+        <div class="info-box"><h4>Insurance</h4><p>Active</p></div>
+    </div>
+</div>
+
+    <div class="grid">
+
+       <div class="card">
+    <h3>Activity Feed</h3>
+
+    <div class="feed-item">
+        ✔ Skin Allergy Treatment Complete
+        <span>1 month ago</span>
+    </div>
+
+    
+
+    <div class="feed-item">
+        💉 Rabies Vaccination Completed
+        <span>3 months ago</span>
+    </div>
+
+    <div class="feed-item">
+        🩺 Routine Health Checkup Completed
+        <span>4 months ago</span>
+    </div>
+
+    <div class="feed-item">
+        🦷 Dental Cleaning Performed
+        <span>5 months ago</span>
+    </div>
+
+    
+   <div class="feed-item">
+        📅 Next Checkup Reminder
+        <span>2 months ago</span>
+    </div>
+
+</div> 
+        <div class="card">
+            <h3>Medical History</h3>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Diagnosis</th>
+                    <th>Treatment</th>
+                </tr>
+
+                <tr>
+                    <td>05 Jan 2026</td>
+                    <td>Dental Clean</td>
+                    <td>Minor Cleaning</td>
+                </tr>
+
+                <tr>
+                    <td>12 Jun 2026</td>
+                    <td>Skin Allergy</td>
+                    <td>Hydrocortisone</td>
+                </tr>
+
+                <tr>
+                    <td>05 Mar 2026</td>
+                    <td>Routine Checkup</td>
+                    <td>Healthy</td>
+                </tr>
+            </table>
+
+            <h3 style="margin-top:20px">Prescription</h3>
+
+            <div class="feed-item" style="background:#dcfce7">
+                Rabies Vaccine Completed
+            </div>
+
+            <div class="feed-item" style="background:#fef3c7">
+                Bordetella Vaccine Pending
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn">Print Card</button>
+                <button class="btn">Download Record</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <h3>Current Medications</h3>
+
+            <div class="medication">
+                <div>
+                    <b>Hydrocortisone Cream 1%</b>
+                    <p>Expires 12/2027</p>
+                </div>
+
+                <button class="btn">
+                    Refill
+                </button>
+            </div>
+
+            <div class="medication">
+                <div>
+                   <b>Flea & Tick Prevention</b> <!-- ওষুধের নাম পরিবর্তন করুন -->
+        <p>Next Dose: 05 July 2026</p>
+                </div>
+
+                <button class="btn">
+                    Refill
+                </button>
+            </div>
+
+            <h3 style="margin-top:20px">
+                Vaccination Status
+            </h3>
+
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Details</th>
+                </tr>
+
+                <tr>
+                    <td>12 Jun 2026</td>
+                    <td>Skin Allergy</td>
+                </tr>
+
+                <tr>
+                    <td>05 Mar 2026</td>
+                    <td>Dental Clean</td>
+                </tr>
+
+                <tr>
+                    <td>05 Mar 2026</td>
+                    <td>Healthy</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Dynamic Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- JavaScript Base Controllers -->
+   
+    <script src=".js/VETNOVA.js"></script>
+ <script src=".js/digital-card.js"></script>
+
+
+</body>
+</html>

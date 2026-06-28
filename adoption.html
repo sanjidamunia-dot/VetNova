@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VetNova - Pet Adoption</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- CSS Links -->
+      <link rel="stylesheet" href=".css/VETNOVA.CSS">
+    <link rel="stylesheet" href=".css/adotion.css">
+
+
+</head>
+
+
+<body>
+
+ <!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+
+<section class="hero">
+<div class="hero-text">
+<h1>
+Find Your
+<span>Perfect</span><br>
+Companion
+</h1>
+<p>
+Thousands of loving pets are waiting for a family.
+VetNova helps you adopt healthy and happy pets with
+complete medical support.
+</p>
+</div>
+
+<div class="hero-img">
+
+    <div class="pet-box">
+
+<img src="images/adopt-man.png">
+    </div>
+</section>
+
+<section class="stats">
+<div class="stat">
+<i class="fa fa-dog"></i>
+<h2>250+</h2>
+<p>Pets Adopted</p>
+</div>
+
+
+<div class="stat">
+<i class="fa fa-heart"></i>
+<h2>500+</h2>
+<p>Happy Families</p>
+</div>
+
+<div class="stat">
+<i class="fa fa-user-doctor"></i>
+<h2>50+</h2>
+<p>Veterinary Support</p>
+</div>
+</section>
+
+<div class="title">
+<h2>Available Pets</h2>
+<p>Choose your new family member</p>
+</div>
+
+<div class="filters">
+<button onclick="filterPets('all')">All</button>
+<button onclick="filterPets('dog')">Dogs</button>
+<button onclick="filterPets('cat')">Cats</button>
+<button onclick="filterPets('Birds')">Birds </button>
+<button onclick="filterPets('Fishes')">Fishes</button>
+<button onclick="filterPets('other')">Others</button>
+</div>
+
+<section class="pet-container">
+<div class="pet-card dog">
+<div class="pet-img"><img src="images/adopt-dog.png"></div>
+<div class="pet-info">
+<h3>Max</h3>
+
+<div class="info">
+Golden Retriever<br>
+Age : 2 Years<br>
+Gender : Male<br>
+Location : Dhaka<br>
+Health : Vaccinated
+</div>
+<div class="tags">
+<span>Friendly</span>
+<span>Active</span>
+</div>
+
+<button class="adopt-btn" onclick="adopt('Max')">
+<i class="fa fa-heart"></i>
+Adopt Now
+</button>
+</div>
+</div>
+
+<div class="pet-card cat">
+<div class="pet-img"><img src="images/adopt-cat.png"></div>
+<div class="pet-info">
+<h3>Luna</h3>
+<div class="info">
+Persian Cat<br>
+Age : 1 Year<br>
+Gender : Female<br>
+Location : Khulna<br>
+Health : Healthy
+</div>
+<div class="tags">
+<span>Calm</span>
+<span>Cute</span>
+</div>
+<button class="adopt-btn" onclick="adopt('Luna')">
+<i class="fa fa-heart"></i>
+Adopt Now
+</button>
+</div>
+</div>
+
+
+<div class="pet-card other">
+<div class="pet-img"><img src="images/rabbit.png"></div>
+<div class="pet-info">
+<h3>Snow</h3>
+<div class="info">
+Rabbit<br>
+Age : 8 Months<br>
+Gender : Male<br>
+Location : Chittagong<br>
+Health : Checked
+</div>
+<div class="tags">
+<span>Active</span>
+<span>Lovely</span>
+</div>
+
+<button class="adopt-btn" onclick="adopt('Snow')">
+<i class="fa fa-heart"></i>
+Adopt Now
+</button>
+</div>
+</div>
+</section>
+
+<section class="why">
+<div class="box">
+<i class="fa fa-shield"></i>
+<h3>Verified Pets</h3>
+<p>Every pet receives health checking before adoption.</p>
+</div>
+
+
+<div class="box">
+<i class="fa fa-stethoscope"></i>
+<h3>Medical Support</h3>
+<p>Professional veterinary support after adoption.</p>
+
+</div>
+
+
+
+<div class="box">
+
+<i class="fa fa-house"></i>
+
+<h3>Safe Adoption</h3>
+
+<p>Find the perfect pet for your loving home.</p>
+
+</div>
+
+</section>
+
+
+
+<section class="process">
+
+
+<h2>How Adoption Works</h2>
+
+
+<div class="steps">
+
+
+<div class="step">
+<h3>1</h3>
+<p>Select Your Pet</p>
+</div>
+
+
+<div class="step">
+<h3>2</h3>
+<p>Submit Request</p>
+</div>
+
+
+<div class="step">
+<h3>3</h3>
+<p>Meet Your Pet</p>
+</div>
+
+
+<div class="step">
+<h3>4</h3>
+<p>Bring Home</p>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+ <div id="footer-placeholder"></div>
+
+
+    <script src=".js/VETNOVA.js"></script>
+
+
+
+<script>
+
+
+function adopt(name){
+
+alert(
+"Thank you for choosing "+name+" 🐾\nVetNova adoption team will contact you soon."
+);
+
+}
+
+
+function adopt(name){
+
+alert(
+"Thank you for choosing "+name+" 🐾\nVetNova adoption team will contact you soon."
+);
+
+}
+</script>
+
+<script>
+function filterPets(type) {
+
+    const pets = document.querySelectorAll(".pet-card");
+
+    pets.forEach(pet => {
+
+        if (type === "all") {
+            pet.style.display = "block";
+        }
+        else if (pet.classList.contains(type)) {
+            pet.style.display = "block";
+        }
+        else {
+            pet.style.display = "none";
+        }
+
+    });
+
+}
+
+
+
+</script>
+
+
+</body>
+</html>

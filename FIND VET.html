@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetNova - Find Verified Vets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href=".css/VETNOVA.CSS">
+    <link rel="stylesheet" href=".css/HOME.CSS">
+    <link rel="stylesheet" href=".css/FEATURE.css"> 
+    <link rel="stylesheet" href=".css/FIND VET.css"> 
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="main-content-wrapper">
+        
+        <section id="finder" class="find-vet-section">
+            <div class="finder-container">
+                
+                <div class="section-title-area">
+                    <h2><i class="fas fa-search-location"></i> Find Verified Vets</h2>
+                    <p>Find nearby expert veterinary doctors and clinics easily by typing your area name below.</p>
+                </div>
+
+                <div class="search-filter-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="location-search-input" placeholder="Enter area (e.g., Uttara, Dhanmondi, Gulshan, Mirpur, Bsubundhara...)">
+                    </div>
+                    <div class="search-input-group">
+                        <i class="fas fa-stethoscope"></i>
+                        <select id="specialist-select">
+                            <option value="all">All Specialists</option>
+                            <option value="Surgeon">Veterinary Surgeon</option>
+                            <option value="General">General Veterinarian</option>
+                            <option value="Avian">Avian / Bird Specialist</option>
+                            <option value="Feline">Feline / Cat Specialist</option>
+                            <option value="Dentistry">Veterinary Dentistry</option>
+                            <option value="Dermatology">Veterinary Dermatologist</option>
+                            <option value="Radiology">Veterinary Radiologist</option>
+                            <option value="Emergency">Veterinary Emergency & Critical Care Specialist</option>
+                            <option value="Ophthalmology">Veterinary Ophthalmologist</option>
+                            <option value="Internal Medicine">Veterinary Internal Medicine Specialist</option>
+                 
+                        </select>
+                    </div>
+                    <button class="btn-finder-search" onclick="searchVets()">
+                        <i class="fas fa-search"></i> Search Vets
+                    </button>
+                </div>
+
+                <div class="vets-grid" id="vets-list-container">
+                    </div>
+
+            </div>
+        </section>  
+        </main>
+<div class="pagination">
+    <a href="#">←</a>
+      <a href="#" class="active" onclick="changePage(1)">1</a>
+    <a href="#" onclick="changePage(2)">2</a>
+    <a href="#" onclick="changePage(3)">3</a>
+    <a href="#">4</a>
+    <span>...</span>
+    <a href="#">10</a>
+    <a href="#">→</a>
+</div>
+</div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src=".js/VETS_DATA.js"></script>
+    <script src=".js/VETNOVA.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Profile Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href=".css/VETNOVA.CSS">
+<link rel="stylesheet" href=".css/profile.css">
+
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+<div class="dashboard">
+
+    <!-- USER -->
+    <div class="card">
+
+        <div class="user-header">
+            <div class="title">
+                <i class="fa-regular fa-user"></i>
+                User Information
+            </div>
+        </div>
+
+        <div class="user-body">
+
+            <div class="user-info">
+<div class="profile-pic">
+
+    <img id="userImg" src="https://via.placeholder.com/150">
+
+    <label for="imgUpload" class="camera-btn">
+        <i class="fa-solid fa-camera"></i>
+    </label>
+
+    <input type="file" id="imgUpload" hidden accept="image/*">
+
+</div>
+
+
+
+                <div class="info-list">
+
+                    <div class="info-item">
+                        <i class="fa-regular fa-user"></i>
+                        <div>
+                            <div class="label">Full Name</div>
+                          <div class="value" id="profileName"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div>
+                            <div class="label">Email Address</div>
+                           <div class="value" id="profileEmail"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <div class="label">Phone Number</div>
+                            <div class="value" id="profilePhone"></div>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <div class="label">Member Since</div>
+                            <div class="value" id="profileMemberSince"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <i class="fa-regular fa-calendar"></i>
+                    <h2>12</h2>
+                    <p>Appointments</p>
+                </div>
+
+                <div class="stat">
+                    <i class="fa-solid fa-paw"></i>
+                    <h2>2</h2>
+                    <p>Pets</p>
+                </div>
+
+                <div class="stat">
+                    <i class="fa-regular fa-file"></i>
+                    <h2>8</h2>
+                    <p>Medical Records</p>
+                </div>
+
+                <div class="stat">
+                    <i class="fa-regular fa-heart"></i>
+                    <h2>5</h2>
+                    <p>Saved Vets</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- PETS -->
+
+    <div class="card">
+
+        <div class="pet-header">
+
+            <div class="title">
+                <i class="fa-solid fa-paw"></i>
+                My Pets
+            </div>
+
+            <button class="add-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add New Pet
+            </button>
+
+        </div>
+
+        <!-- PET 1 -->
+
+        <div class="pet-card">
+
+            <div class="pet-wrap">
+
+                <div class="pet-img">
+                    <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600" alt="">
+                </div>
+
+                <div class="pet-details">
+
+                    <div class="pet-top">
+                        <div>
+                            <div class="pet-name">Bruno ♂</div>
+                            <div class="pet-breed">Golden Retriever</div>
+                        </div>
+
+                        <div class="menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="pet-meta">
+                        <span><i class="fa-regular fa-star"></i> 3 Years</span>
+                        <span><i class="fa-regular fa-calendar"></i> 28 kg</span>
+                    </div>
+
+                    <div class="status">
+                        Up to date
+                    </div>
+
+                    <div class="pet-actions">
+
+                      <div class="action" onclick="window.location.href='pet-profile.html'">
+    <div class="action-icon">
+        <i class="fa-regular fa-user"></i>
+    </div>
+    <p>Profile</p>
+</div>
+
+                       <div class="action" onclick="window.location.href='medical-records.html'">
+    <div class="action-icon">
+        <i class="fa-regular fa-file-medical"></i>
+    </div>
+    <p>Medical Records</p>
+</div>
+                        <div class="action" onclick="window.location.href='vaccination.html'">
+    <div class="action-icon">
+        <i class="fa-solid fa-syringe"></i>
+    </div>
+    <p>Vaccination</p>
+</div>
+
+                        <div class="action">
+                            <div class="action-icon">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+                            <p>Reminders</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PET 2 -->
+
+        <div class="pet-card">
+
+            <div class="pet-wrap">
+
+               <div class="pet-img">
+
+    <img id="petImg"
+    src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=600">
+
+    <label for="petUpload" class="pet-camera">
+        <i class="fa-solid fa-camera"></i>
+    </label>
+
+    <input type="file" id="petUpload" hidden accept="image/*">
+
+</div>
+
+                <div class="pet-details">
+
+                    <div class="pet-top">
+                        <div>
+                            <div class="pet-name">Milo ♂</div>
+                            <div class="pet-breed">Persian Cat</div>
+                        </div>
+
+                        <div class="menu">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="pet-meta">
+                        <span><i class="fa-regular fa-star"></i> 2 Years</span>
+                        <span><i class="fa-regular fa-calendar"></i> 4.5 kg</span>
+                    </div>
+
+                    <div class="status">
+                        Up to date
+                    </div>
+
+                    <div class="pet-actions">
+
+                        <div class="action">
+                            <div class="action-icon">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <p>Profile</p>
+                        </div>
+
+                        <div class="action">
+                            <div class="action-icon">
+                                <i class="fa-regular fa-file-medical"></i>
+                            </div>
+                            <p>Medical Records</p>
+                        </div>
+
+                        <div class="action">
+                            <div class="action-icon">
+                                <i class="fa-solid fa-syringe"></i>
+                            </div>
+                            <p>Vaccination</p>
+                        </div>
+
+                        <div class="action">
+                            <div class="action-icon">
+                                <i class="fa-regular fa-bell"></i>
+                            </div>
+                            <p>Reminders</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  <div id="footer-placeholder"></div>
+
+   
+    <script src=".js/VETNOVA.js"></script>
+     <script src=".js/profile.js"></script>
+
+</body>
+</html>

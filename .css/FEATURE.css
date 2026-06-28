@@ -1,0 +1,217 @@
+
+body{
+    background:#f3fffd;
+    overflow-x:hidden;
+    position:relative;
+    margin-top:-100px;
+}
+
+.bg-shape{
+    position:absolute;
+    border-radius:50%;
+    z-index:0;
+}
+
+.shape1{
+    width:300px;
+    height:300px;
+    background:#c7fff4;
+    top:0px;
+    left:-100px;
+}
+
+.shape2{
+    width:300px;
+    height:300px;
+    background:#d9fff8;
+    right:-120px;
+    top:80px;
+}
+
+.shape3{
+    width:250px;
+    height:250px;
+    background:#e9fffb;
+    bottom: 80px;
+    left:20%;
+}
+
+
+
+/* --- About SECTION --- */
+.simple-about {
+    margin-top: 0px; 
+    padding-bottom: 90px;
+       background: transparent;
+ 
+    z-index:2;
+     position:relative;
+}
+
+
+
+
+
+
+
+
+
+
+.features-section {
+    margin-top: 80px; 
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Section Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #1e3d4a;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-header .underline {
+    width: 60px;
+    height: 4px;
+    background-color: #00bfa5;
+    margin: 0 auto 15px auto;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Features Grid Layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Base Feature Card Styles */
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent; /* Smooth hover transition border placement */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer; /* Force pointer indicator on cursor interaction */
+}
+
+/* Icon Box Default Styles */
+.icon-box {
+    font-size: 40px;
+    color:#223b4d;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    color: #333333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease; /* Changes title text color on action */
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+button{
+
+    border:none;
+
+    background:#12bbae;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    font-size:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+    margin-top:20px;
+
+}
+
+
+button i{
+
+    margin-right:5px;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+    background:#07998f;
+
+}
+/* ===================================================
+   Dynamic Hover Color Modifications (The Fixes)
+   =================================================== */
+.feature-card:hover {
+    transform: translateY(-8px); /* Card lifts up a bit cleaner */
+    box-shadow: 0 12px 30px rgba(0, 191, 165, 0.15); /* Soft premium brand glow */
+    border-color: rgba(0, 191, 165, 0.3); /* Subtle card boundary highlight */
+}
+
+
+.feature-card:hover .icon-box {
+  color:#223b4d; /* Deep brand color tint */
+    transform: scale(1.12); /* Dynamic interactive scaling */
+}
+
+
+.feature-card:hover h3 {
+    color: #00bfa5; /* Brand premium teal highlight color change */
+}
+
+
+/* Responsive Design Configurations */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-header h2 {
+        font-size: 28px;
+    }
+}

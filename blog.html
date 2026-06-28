@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VetNova - Pet Care Blog</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link rel="stylesheet" href=".css/VETNOVA.CSS">
+<link rel="stylesheet" href=".css/HOME.CSS">
+<link rel="stylesheet" href=".css/FEATURE.css">
+<link rel="stylesheet" href=".css/Appointment booking.css"> 
+<link rel="stylesheet" href=".css/Vaccine.css">
+<link rel="stylesheet" href=".css/emergency.css">
+<link rel="stylesheet" href=".css/blog.css">
+</head>
+
+<body>
+
+
+
+<!-- Dynamic Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+<section class="blog-hero">
+<div class="container blog-hero-wrap">
+<div>
+<h1>Pet Care Blog</h1>
+<p>Expert tips, helpful guides and the latest pet care news to keep your furry friends happy and healthy.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200" alt="Pet">
+
+</div>
+</section>
+
+<div class="container">
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Search articles...">
+<select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="nutrition">Nutrition</option>
+    <option value="health">Health</option>
+    <option value="training">Training</option>
+    <option value="grooming">Grooming</option>
+    <option value="behavior">Behavior</option>
+    <option value="general-care">General Care</option>
+
+</select>
+<button>
+<i class="fas fa-search"></i>
+Search
+</button>
+</div>
+</div>
+
+<section class="container main">
+<div id="articlesContainer">
+<h2 >Latest Articles</h2>
+
+<div class="blog-card" data-category="nutrition">
+<img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800">
+<div>
+<span class="badge">Nutrition</span>
+<h3>Best Foods for a Healthy Pet</h3>
+<p>Complete guide to choosing the right food for your pet's age, size and health condition.</p>
+<div class="article-meta">
+    <span>📅 May 15, 2025</span>
+    
+        <a href="https://www.google.com/search?q=pet+nutrition+guide" target="_blank">
+Read More →
+</a>
+    
+   
+
+</div>
+</div>
+</div>
+<div class="blog-card" data-category="health">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
+<div>
+<span class="badge">Health</span>
+<h3>Vaccinations: Why They Matter</h3>
+<p>Understand the importance of regular vaccinations and how they protect your pet.</p>
+<div class="article-meta">
+    <span>📅 june 15, 2025</span>
+    
+    
+        <a href="https://www.google.com/search?q=pet+vaccination+guide" target="_blank">
+        Read More →
+    </a>
+
+</div>
+</div>
+</div>
+
+<div class="blog-card" data-category="training">
+    
+<img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=800">
+<div>
+<span class="badge">Training</span>
+<h3>Basic Training Tips for Puppies</h3>
+<p>Simple and effective methods to help your puppy learn good behavior.</p>
+<div class="article-meta">
+    <span>📅 February 03, 2026</span>
+  
+    <a href="https://www.google.com/search?q=puppy+training+tips" target="_blank">
+
+        Read More →
+    </a>
+
+</div>
+
+</div>
+</div>
+<div class="pagination">
+    <a href="#">←</a>
+      <a href="#" onclick="changePage(1)">1</a>
+    <a href="#" onclick="changePage(2)">2</a>
+    <a href="#" onclick="changePage(3)">3</a>
+    <a href="#">4</a>
+    <span>...</span>
+    <a href="#">10</a>
+    <a href="#">→</a>
+</div>
+</div>
+
+
+<aside>
+<div class="sidebar-box">
+<h3>Categories</h3>
+<ul class="cat-list">
+    <li><span>🍏 Nutrition</span><strong>12</strong></li>
+    <li><span>❤️ Health</span><strong>18</strong></li>
+    <li><span>🐾 Training</span><strong>10</strong></li>
+    <li><span>✂️ Grooming</span><strong>8</strong></li>
+    <li><span>👤 Behavior</span><strong>7</strong></li>
+    <li><span>🏠 General Care</span><strong>9</strong></li>
+</ul>
+</div>
+
+<div class="sidebar-box">
+<h3>Popular Articles</h3>
+<ul class="popular-list">
+
+<li>
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300">
+    <div>
+        <h5>How Often Should You Take Your Pet to the Vet?</h5>
+        <small>May 12, 2025</small>
+    </div>
+</li>
+
+<li>
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300">
+    <div>
+        <h5>Summer Care Tips for Pets</h5>
+        <small>May 8, 2025</small>
+    </div>
+</li>
+
+<li>
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=300">
+    <div>
+        <h5>Understanding Your Pet's Behavior</h5>
+        <small>Apr 30, 2025</small>
+    </div>
+</li>
+
+<li>
+    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=300">
+    <div>
+        <h5>Dental Care Tips for Pets</h5>
+        <small>Apr 18, 2025</small>
+    </div>
+</li>
+
+</ul>
+</div>
+</aside>
+</section>
+
+<div class="container">
+<div class="newsletter">
+<h2> Have a Pet Health Question?</h2>
+<p>Talk to a certified veterinarian about your pet's health concerns.</p><br>
+
+<a href="FIND VET.html" class="btn">Find a Vet Now</a>
+</div>
+</div>
+
+
+ <div id="footer-placeholder"></div>
+
+
+
+ <script src=".js/VETNOVA.js"></script>
+
+ <script src=".js/blog.js"></script>
+
+</body>
+</html>

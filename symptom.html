@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetNova - Smart Symptom Tracker</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href=".css/VETNOVA.CSS">
+    <link rel="stylesheet" href=".css/HOME.CSS">
+    <link rel="stylesheet" href=".css/FEATURE.css"> 
+    <link rel="stylesheet" href=".css/Symptom-tracker.css">
+     
+</head>
+<body>
+
+   <div id="navbar-placeholder"></div>
+
+    <!-- Main Tracker Card Container -->
+    <div class="tracker-container">
+        
+        <!-- Interactive Progress Workflow Panel -->
+        <div class="progress-header">
+            <div class="progress-title">Pet Health Analysis</div>
+            <a href="#" class="start-over" onclick="resetTracker(event)"><i class="fas fa-redo"></i> Start over</a>
+        </div>
+
+        <div class="progress-bar-wrapper">
+            <div class="progress-line"></div>
+            <div class="progress-line-fill" id="progress-line-fill"></div>
+            
+            <div class="step-node active" id="node-1">
+                <div class="circle">1</div>
+                <div class="step-label">Pet Details</div>
+            </div>
+            <div class="step-node" id="node-2">
+                <div class="circle">2</div>
+                <div class="step-label">Main Symptom</div>
+            </div>
+            <div class="step-node" id="node-3">
+                <div class="circle">3</div>
+                <div class="step-label">Symptom Details</div>
+            </div>
+            <div class="step-node" id="node-4">
+                <div class="circle">4</div>
+                <div class="step-label">Report</div>
+            </div>
+        </div>
+
+        <!-- ================= STEP 1: PET DETAILS ================= -->
+        <div class="step-content active" id="step-1">
+            <h2 class="section-heading">Tell us about your pet</h2>
+            <p class="section-subheading">Provide basic details to tailor the health triage tracking algorithm.</p>
+            
+            <div class="form-group">
+                <label class="form-label">What type of pet do you have?</label>
+                <div class="options-grid" id="pet-type-grid">
+                    <div class="option-card" data-value="Dog"><i class="fas fa-dog"></i><br>Dog</div>
+                    <div class="option-card" data-value="Cat"><i class="fas fa-cat"></i><br>Cat</div>
+                    <div class="option-card" data-value="Bird"><i class="fas fa-dove"></i><br>Bird</div>
+                     <div class="option-card" data-value="Fish"><i class="fas fa-fish"></i><br>Fish</div>
+                      <div class="option-card" data-value="Turtle"><i class="fas fa-person-dots-from-line"></i><br>Turtle</div>
+                       <div class="option-card" data-value="Heart"><i class="fas fa-"></i><br>Hamster</div>
+                        <div class="option-card" data-value="Exotic"><i class="fas fa-dragon"></i><br>Exotic</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">What is their gender?</label>
+                <div class="options-grid" id="pet-gender-grid">
+                    <div class="option-card" data-value="Male"><i class="fas fa-mars"></i> Male</div>
+                    <div class="option-card" data-value="Female"><i class="fas fa-venus"></i> Female</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">How old are they?</label>
+                <select id="pet-age">
+                    <option value="" disabled selected>Select age range</option>
+                    <option value="Puppy/Kitten (0-1 year)">Puppy/Kitten (0-1 year)</option>
+                    <option value="Adult (1-7 years)">Adult (1-7 years)</option>
+                    <option value="Senior (7+ years)">Senior (7+ years)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Is your pet neutered / spayed?</label>
+                <div class="options-grid" id="pet-neutered-grid">
+                    <div class="option-card" data-value="Yes">Yes</div>
+                    <div class="option-card" data-value="No">No</div>
+                    <div class="option-card" data-value="Unsure">I don't know</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= STEP 2: MAIN SYMPTOMS ================= -->
+        <div class="step-content" id="step-2">
+            <h2 class="section-heading" id="step-2-title">What symptoms is your pet showing?</h2>
+            <p class="section-subheading">Select the primary issue that best describes what you are noticing today.</p>
+            
+            <div class="symptom-list" id="symptom-selector-container">
+              </div>
+                <div style="margin-top: 25px;">
+        <label for="symptom-description" style="font-weight: 600; display: block; margin-bottom: 8px;">Brief Description (Optional):</label>
+        <textarea id="symptom-description" 
+                  placeholder="Tell us a little more about what you're noticing..." 
+                  style="width: 100%; height: 100px; padding: 12px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+    
+                <!-- Will be dynamically populated via JS based on selected pet type -->
+            </div>
+        </div>
+
+        <!-- ================= STEP 3: SYMPTOMS DETAILS ================= -->
+        <div class="step-content" id="step-3">
+            <h2 class="section-heading" id="step-3-title">Tell us more about the symptoms</h2>
+            <p class="section-subheading">Answer these brief questions to evaluate vulnerability severity indicators.</p>
+            
+            <div id="dynamic-questions-wrapper">
+                <!-- Dynamically populated conditional medical checkboxes/radios via JS -->
+            </div>
+        </div>
+
+        <!-- ================= STEP 4: GENERATED CLINICAL REPORT ================= -->
+        <div class="step-content" id="step-4">
+            <h2 class="section-heading">Your Pet's Health Triage Report</h2>
+            <p class="section-subheading">Based on the tracked updates, here is a preliminary  summary analysis.</p>
+            
+            <div class="report-box">
+                <div class="report-header-summary">
+                    <h3 style="color:var(--text-dark);" id="report-pet-name">Pet Assessment Status</h3>
+                    <div class="pet-profile-tags">
+                        <span class="pet-badge-profile" id="report-pet-meta">Dog • Male</span>
+                    </div>
+                </div>
+
+                <div id="report-diagnostics-output">
+                    <!-- Dynamic conditional treatment summaries render here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Wizard Navigation Footer Actions Interface Bar -->
+        <div class="btn-group">
+            <button class="btn-nav btn-back" id="btn-back" onclick="navigateStep(-1)" style="display: none;">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn-nav btn-continue" id="btn-next" onclick="navigateStep(1)">
+                Continue <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+    </div>
+
+   <div id="footer-placeholder"></div>
+   <script src=".js/vetnova.js"></script>
+    <script src=".js/Symptom-tracker.js"></script>
+</body>
+</html>

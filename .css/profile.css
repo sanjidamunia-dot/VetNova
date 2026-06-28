@@ -1,0 +1,309 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+
+ body{
+    background:linear-gradient(135deg,#dff8f6,#f7ffff);
+    min-height:100vh;
+    padding-top:40px; /* navbar er jonno gap */
+}
+
+
+
+.dashboard{
+  
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:14px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border:1px solid #d9f4f0;
+}
+
+/* LEFT PANEL */
+
+.user-header,
+.pet-header{
+    padding:18px 24px;
+    border-bottom:1px solid #ececec;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#2f2f2f;
+    font-size:24px;
+    font-weight:700;
+}
+
+.title i{
+    color:#47c5bc;
+}
+
+.user-body{
+    padding:28px;
+}
+
+.user-info{
+    display:flex;
+    gap:30px;
+}
+
+.profile-pic{
+    position:relative;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid #49c5bc;
+    padding:5px;
+}
+
+.camera-btn{
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#49c5bc;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+.profile-pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.info-list{
+    flex:1;
+}
+
+.info-item{
+    display:flex;
+    gap:15px;
+    margin-bottom:24px;
+}
+
+.info-item i{
+    color:#49c5bc;
+    margin-top:5px;
+}
+
+.label{
+    color:#8d8d8d;
+    font-size:14px;
+}
+
+.value{
+    font-weight:600;
+    margin-top:3px;
+}
+
+.stats{
+    margin-top:35px;
+    background:#dff9f7;
+    border-radius:15px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    padding:25px;
+    text-align:center;
+}
+
+.stat{
+    border-right:1px solid rgba(0,0,0,.08);
+}
+
+.stat:last-child{
+    border:none;
+}
+
+.stat i{
+    color:#49c5bc;
+    font-size:22px;
+}
+
+.stat h2{
+    margin-top:12px;
+    font-size:32px;
+}
+
+.stat p{
+    color:#666;
+    font-size:14px;
+}
+
+/* RIGHT */
+
+.add-btn{
+    background:#45c5bb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.pet-card{
+    padding:18px;
+    border-bottom:1px solid #ececec;
+}
+
+.pet-wrap{
+    display:flex;
+    gap:20px;
+}
+
+.pet-img{
+    width:170px;
+    height:170px;
+    border-radius:12px;
+    overflow:hidden;
+    border:3px solid #48c5bc;
+    position:relative;
+}
+.pet-camera{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#49c5bc;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+.pet-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.pet-details{
+    flex:1;
+}
+
+.pet-top{
+    display:flex;
+    justify-content:space-between;
+}
+
+.pet-name{
+    font-size:32px;
+    font-weight:700;
+    color:#2d2d2d;
+}
+
+.pet-breed{
+    color:#777;
+    margin-top:5px;
+}
+
+.pet-meta{
+    display:flex;
+    gap:25px;
+    margin-top:14px;
+    color:#666;
+}
+
+.status{
+    display:inline-block;
+    margin-top:16px;
+    background:#dffaf5;
+    color:#43b7ae;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.pet-actions{
+    display:flex;
+    gap:28px;
+    margin-top:22px;
+}
+
+.action{
+    text-align:center;
+}
+
+.action-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#dff9f7;
+    color:#49c5bc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:20px;
+}
+
+.action p{
+    font-size:13px;
+    margin-top:8px;
+    color:#555;
+}
+
+.menu{
+    font-size:22px;
+    cursor:pointer;
+}
+
+@media(max-width:1100px){
+.dashboard{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:700px){
+
+.user-info{
+flex-direction:column;
+align-items:center;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.pet-wrap{
+flex-direction:column;
+}
+
+.pet-img{
+width:100%;
+height:250px;
+}
+
+.pet-actions{
+flex-wrap:wrap;
+justify-content:center;
+}
+}
